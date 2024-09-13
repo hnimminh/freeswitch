@@ -4110,7 +4110,7 @@ static void parse_gateways(sofia_profile_t *profile, switch_xml_t gateways_tag, 
 				}
 			} else {
 				if (simple_contact) {
-					params = switch_core_sprintf(gateway->pool, ";transport=%s", contact_params, register_transport);
+					params = switch_core_sprintf(gateway->pool, ";transport=%s", register_transport);
 				} else {
 					params = switch_core_sprintf(gateway->pool, ";transport=%s;gw=%s", register_transport, gateway->name);
 				}

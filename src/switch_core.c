@@ -3011,8 +3011,8 @@ SWITCH_DECLARE(switch_status_t) switch_core_destroy(void)
 	switch_set_flag((&runtime), SCF_NO_NEW_SESSIONS);
 	switch_set_flag((&runtime), SCF_SHUTTING_DOWN);
 
-	switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_CONSOLE, "End existing sessions\n");
-	switch_core_session_hupall(runtime.shutdown_cause);
+	switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_CONSOLE, "Libre - I dont end existing sessions!\n");
+	// switch_core_session_hupall(runtime.shutdown_cause);
 	switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_CONSOLE, "Clean up modules.\n");
 
 	switch_loadable_module_shutdown();
